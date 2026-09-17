@@ -26,5 +26,16 @@ public class Ejercicio3 {
          }
           
       } 
-    
+   public static void mostrarLetraSwitch(String palabra){
+       char letra = palabra.charAt(0);
+        
+       switch(letra){
+           case 'a','e','i','o','u': System.out.println("Es vocal");
+            break;
+           default:
+               System.out.println("Es consonante");
+ 
+       }
+    }     
+   
 }

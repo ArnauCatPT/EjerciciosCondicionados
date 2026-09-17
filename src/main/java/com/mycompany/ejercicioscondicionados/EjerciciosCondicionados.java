@@ -26,8 +26,10 @@ public class EjerciciosCondicionados {
             System.out.println("4.- Ejercicio 4");
             System.out.println("5.- Ejercicio 5");
             System.out.println("6.- Ejercicio 6");
-            System.out.println("7.- Ejercicio 7");
-            System.out.println("8.- Salir");
+            System.out.println("7.- Ejercicio 4 con Switch");
+            System.out.println("8.- Ejercicio 6 con Switch");  
+            System.out.println("9.- Ejercicio 3 con Switch");  
+            System.out.println("10.- Salir");
             op = sc.nextInt();
             
             switch (op){
@@ -46,10 +48,15 @@ public class EjerciciosCondicionados {
                     int num3 = sc.nextInt();
                     Ejercicio2.mostrarMayord3(num1, num2, num3);
                     break;
-                case 3:
+                case 3,9:
                     System.out.println("Introduce una letra: ");
                     String palabra = sc.next();
-                    Ejercicio3.mostrarLetra(palabra);
+                    if (op==4) {
+                        Ejercicio3.mostrarLetra(palabra);
+                    }else{
+                        Ejercicio3.mostrarLetraSwitch(palabra);
+                    }
+
                     break;
                 case 4,7:
                     System.out.println("Introduce el numero de un mes: ");
@@ -84,14 +91,19 @@ public class EjerciciosCondicionados {
                         System.out.println("La primera es incorrecta");
                     }
                     break;
-                case 6:
+                case 6,8:
                     System.out.println("Ejercicio 6: ");
                     System.out.println("Horas trabajadas? ");
                     int horas = sc.nextInt();
-                    Ejercicio6.mostrarDinero(horas);
+                    if (op==4) {
+                        Ejercicio6.mostrarDinero(horas);
+                    }else{
+                        Ejercicio6.mostrarDinSwitch(horas);
+                    }
+
                     break;                    
             }
-        }while(op!=8);
+        }while(op!=10);
 
         
 }

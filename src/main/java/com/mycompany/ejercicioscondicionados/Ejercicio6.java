@@ -17,11 +17,9 @@ horas extra son las que sobrepasan las 40 horas semanales.
 Cuando las horas extras no son más de 8, se pagan el doble,
 cuando pasan de 8, las primeras 8 se pagan el doble y el resto el
 triple.
-        
-                
+                       
         */ 
-       
-       
+              
        int horasExtras = horas - 40;
        int auxhoras = 0;
        
@@ -39,5 +37,27 @@ triple.
        }
 
        
-    }     
+    }
+    public static void mostrarDinSwitch(int horas){
+                    
+       int aux = (horas<=40) ? 0 : (horas>=41 && horas<=48) ? 1 : 2;
+       int horasAux = 0;
+       int horasD = horas - 40;
+       int horasT = horas - 48;
+       
+       
+       switch (aux){
+           case 0:
+               System.out.println("No tiene horas extras");
+               break;
+           case 1:
+               System.out.println("Las primeras "+horasD+" horas se pagan el doble");
+               break;
+           case 2:
+               System.out.println("Las primeras "+horasD+" horas se pagan el doble");;
+               System.out.println("Las siguientes "+horasT+" se pagan el triple");
+               break;
+       }
+       
+    }
 }
